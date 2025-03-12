@@ -1,24 +1,26 @@
 // Write your solution in this file!
-const returnFirstTwoDrivers = function(drivers){
-    return drivers.slice(0, 2)
+let customerName = "bob"
+
+function getCustomerName() {
+    return customerName
+}
+console.log(getCustomerName())
+function upperCaseCustomerName() {
+    customerName = customerName.toUpperCase();
+}
+upperCaseCustomerName()
+console.log(customerName)
+
+function setBestCustomer() {
+    bestCustomer = "not bob"; 
 }
 
-const returnLastTwoDrivers = function(drivers) {
-    return drivers.slice(-2)
+function overwriteBestCustomer() {
+    bestCustomer = "maybe bob"
 }
 
-const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
+const leastFavoriteCustomer = "some customer"
 
-const createFareMultiplier = function(multiply) {
-    return function(fare) {
-        return fare * multiply
-    }
-}
-
-const fareDoubler = createFareMultiplier(2)
-
-const fareTripler = createFareMultiplier(3)
-
-const selectDifferentDrivers = function(drivers, driverFunction) {
-    return driverFunction(drivers)
+function changeLeastFavoriteCustomer() {
+    leastFavoriteCustomer = "another customer"
 }
